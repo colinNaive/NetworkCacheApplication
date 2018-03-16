@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
-import com.ctrip.networkcacheapplication.callback.ICallback;
+import com.ctrip.networkcacheapplication.callback.CacheNetworkCallback;
 import com.ctrip.networkcacheapplication.controller.NetworkCacheManager;
 import com.ctrip.networkcacheapplication.controller.Type;
 
@@ -26,8 +26,8 @@ public class MainActivity extends AppCompatActivity {
         Map<String, Object> map = new HashMap<>();
         map.put("paramA", "A");
         map.put("parmaB", "B");
-        
-        NetworkCacheManager.getInstance(Type.both).send("www.baidu.com", map, new ICallback() {
+
+        NetworkCacheManager.getInstance(Type.both).send("www.baidu.com", map, new CacheNetworkCallback() {
             @Override
             public void onSuccess(@NotNull String result, boolean fromNetwork) {
 

@@ -5,6 +5,6 @@ package com.ctrip.networkcacheapplication.callback
  * @email zhshan@ctrip.com ^.^
  */
 interface ICallback {
-    fun onSuccess(result: String, fromNetwork: Boolean)
-    fun onFailure(e: String, fromNetwork: Boolean)
+    fun onSuccessCall(result: String, fromNetwork: Boolean)
+    fun onFailureCall(e: String, fromNetwork: Boolean)
 }
